@@ -17,7 +17,7 @@ from pypdf import PdfReader
 from sentence_transformers import SentenceTransformer
 
 # Vector store (free, local)
-import faiss
+import faiss # use pinecone for larger scale applications instead of faiss
 import numpy as np
 
 # LLM (free, local)
