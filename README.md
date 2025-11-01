@@ -140,3 +140,4 @@ This template is intentionally kept simple to facilitate learning. Here are some
 ---
 
 *Template designed for hands-on learning and experimentation with RAG systems*
+*Last Updated on: 11-01-2025*
