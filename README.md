@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project provides a foundational RAG system that runs completely locally without requiring API keys. It's designed as a learning template for students to understand RAG architecture and experiment with enhancements.
+This project provides a foundational RAG system that runs completely locally without requiring API keys. It's designed as a learning template for students to understand RAG architecture and experiment with features. There are many suggestions below for students to expand on this template. Students are encouraged to use LLM tools to assist them in coding. Note: This project will download Phi-2 to hard drive (~5GB). Models may be deleted from your computer hard drive after project completion. 
 
 **Course:** ECON 5502 — Fall 2025
 
@@ -18,25 +18,34 @@ The `rag_system.py` script includes:
 - **Language Model**: Text generation with Microsoft Phi-2 (2.7B parameters, CPU-optimized)
 - **Web Interface**: Interactive chat UI built with Gradio
 
-All components run locally on your machine - no API keys or cloud services required!
+All components run locally on your machine - no API keys or cloud services required! The cost of this is that the chatbot can have high latency. This is one of the areas for students to develop and iterate on, learning to build at pace. 
 
-## Setup Instructions after creating virtual environment
+## Setup Instructions
+**Run these commands in the terminal**
 
-1. **Install Dependencies:**
+1. **Create virtual environment (and activate it) [make sure Kernel is using this virtual environment]:**
+   ```bash
+   python -m venv msqe-rag
+   ```
+   then after venv is created 
+   ```bash
+   source msqe-rag/bin/activate
+   ```
+
+2. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Add Your Documents:**
-   - Create a `documents/` folder in the project directory
-   - Place your PDF files in the `documents/` folder
+3. **Add Your Documents:**
+   - Place your PDF files in the `documents/` folder (intro to econometrics textbook is the sampled pdf included)
 
-3. **Run the System:**
+4. **Run the System:**
    ```bash
    python rag_system.py
    ```
 
-4. **Use the Interface:**
+5. **Use the Interface (This can be removed if latency is too high and interact in terminal):** 
    - The Gradio interface will launch in your browser
    - Ask questions about your PDF documents
    - View retrieved sources for each answer
@@ -46,7 +55,7 @@ All components run locally on your machine - no API keys or cloud services requi
 ```
 msqe-rag/
 ├── documents/           # Put your PDF files here
-│   └── your_file.pdf
+│   └── your_files.pdf   
 ├── rag_system.py        # Main RAG implementation
 ├── requirements.txt     # Project python dependencies
 └── README.md
