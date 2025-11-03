@@ -55,8 +55,9 @@ All components run locally on your machine - no API keys or cloud services requi
 ```
 msqe-rag/
 ├── documents/           # Put your PDF files here
-│   └── your_files.pdf   
-├── rag_system.py        # Main RAG implementation
+│   └── your_files.pdf
+├── rag_chatbot.py       # Low latency solution (start here)
+├── rag_system.py        # Main RAG implementation to
 ├── requirements.txt     # Project python dependencies
 └── README.md
 ```
