@@ -10,6 +10,8 @@ This project provides a foundational RAG system that runs completely locally wit
 
 ## Current Implementation
 
+The `rag_system.py` can be a bit slow. See `rag_chatbot.py` for low latency solution using Hugging Face API. The `rag_chatbot_notebook.py` does not use a class and may be easier for students to build upon given the notebook style they are familiar with. 
+
 The `rag_system.py` script includes:
 
 - **PDF Processing**: Extract text from local PDF documents using PyPDF
@@ -54,11 +56,12 @@ All components run locally on your machine - no API keys or cloud services requi
 
 ```
 msqe-rag/
-├── documents/           # Put your PDF files here
+├── documents/                 # Put your PDF files here
 │   └── your_files.pdf
-├── rag_chatbot.py       # Low latency solution (start here)
-├── rag_system.py        # Main RAG implementation to
-├── requirements.txt     # Project python dependencies
+├── rag_chatbot_notebook.py    # Low latency solution with notebook for easy building (start here) [NO API]
+├── rag_chatbot.py             # Low latency solution with API (uses class)
+├── rag_system.py              # Main RAG implementation to
+├── requirements.txt           # Project python dependencies
 └── README.md
 ```
 
